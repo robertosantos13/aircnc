@@ -6,6 +6,10 @@
   "repository": "git remote add origin https://github.com/robertosantos13/aircnc.git",
   "author": "Roberto Santos",
   "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "mongodb": "^3.3.3",

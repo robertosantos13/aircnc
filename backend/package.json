@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend from project Rockeseat",
+  "main": "sever.js",
+  "repository": "git remote add origin https://github.com/robertosantos13/aircnc.git",
+  "author": "Roberto Santos",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}

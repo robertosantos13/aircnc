@@ -1,9 +1,10 @@
 const express = require("express");
-const server = express();
 const mongoose = require("mongoose");
-const router = require("./routes/routes");
+const cors = require("cors");
+const path = require("path");
+const routes = require("./routes/routes");
 
-server.use(express.json());
+const app = express();
 
 mongoose.connect(
   "mongodb://aircnc:aircnc123@ds141198.mlab.com:41198/aircncdb",
@@ -13,8 +14,11 @@ mongoose.connect(
   }
 );
 
-server.use(router);
+app.use(cors());
+app.use(express.json());
+app.use("/files", express.static(path.resolve(__dirname, "..", "uploads")));
+app.use(routes);
 
 const port = process.env.PORT || 3333;
 
-server.listen(port, () => console.log(`Server runnning in port ${port}`));
+app.listen(port, () => console.log(`Server runnning in port ${port}`));

@@ -15,6 +15,7 @@ router.get("/users", SessionController.index);
 router.get("/spots", SpotController.index);
 //store
 router.post("/users", SessionController.store);
+router.post("/sessions", SessionController.store);
 router.post("/spots", upload.single("thumbnail"), SpotController.store);
 
 router.post("/spots/:spot_id/bookings", BoookingController.store);
